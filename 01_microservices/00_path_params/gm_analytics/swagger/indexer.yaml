@@ -1,0 +1,39 @@
+swagger: '2.0'
+
+info:
+  title: User API
+  version: "0.1.0"
+
+paths:
+  /users/{username}:
+    get:
+      x-swagger-router-controller: gm_analytics
+      operationId: handlers.get_user_info
+      summary: Returns user information.
+      parameters:
+        - name: username
+          in: path
+          required: true
+          type: string
+          format: path
+      responses:
+        200:
+          description: Successful response.
+          schema:
+            $ref: '#/definitions/User'
+
+definitions:
+  User:
+    type: object
+    required:
+      - id
+      - role
+    properties:
+      id:
+        type: string
+        description: User id
+        example: 123
+      role:
+        type: string
+        description: User role
+        example: collaborator

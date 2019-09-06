@@ -1,0 +1,1 @@
+DROP database icesi_blog;

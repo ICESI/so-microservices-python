@@ -1,0 +1,2 @@
+connexion==2.3.0
+swagger_ui_bundle==0.0.5
