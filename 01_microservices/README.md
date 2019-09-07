@@ -1,6 +1,25 @@
-# so-microservices-python-part2
+# Microservices with Python
 
-## Logging
+### How to execute the examples
+
+Development
+```
+./scripts/deploy.sh
+```
+
+Production
+```
+export PRODUCTION=true
+./scripts/deploy.sh
+```
+
+Tests
+```
+pip3 install -r requirements_dev.txt --user
+tox -e pytest
+```
+
+## Logging example
 
 ```
 import os
