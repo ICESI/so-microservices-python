@@ -23,5 +23,5 @@ def test_get_user_info(mocker, user_info):
     # THEN the information for the user must be returned
     mocker.patch.object(handlers, 'get_user_info', return_value=user_info)
     user_info = handlers.get_user_info('john.doe')
-    assert {'username': 'john.doe', id': '123', 'role': 'admin'} == user_info
+    assert {'username': 'john.doe', 'id': '123', 'role': 'admin'} == user_info
 
