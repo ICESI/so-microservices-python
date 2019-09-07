@@ -31,7 +31,7 @@ def test_get_user_info():
     assert user_info['role'] == 'admin'
     assert len(user_info) == 3
 
-def test_get_user_info_with_patch(mocker, user_info):
+def test_get_user_info_with_patch(mocker, user_role):
     # GIVEN not query parameters or payload
     # WHEN I access to the url GET /users/john.doe
     # THEN the information for the user must be returned
