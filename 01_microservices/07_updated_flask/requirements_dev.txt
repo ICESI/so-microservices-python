@@ -1,7 +1,0 @@
--rrequirements.txt
-pytest
-pytest-mock
-tox
-pylint
-flake8
-mock

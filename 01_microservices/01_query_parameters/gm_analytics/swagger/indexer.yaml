@@ -50,9 +50,14 @@ definitions:
   User:
     type: object
     required:
+      - username
       - id
       - role
     properties:
+      username:
+        type: string
+        description: User username
+        example: john.doe
       id:
         type: string
         description: User id

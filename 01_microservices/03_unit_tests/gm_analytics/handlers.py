@@ -1,6 +1,5 @@
-def get_user_info(username=None):
-    return {"user_info": username}
+def get_user_info(username):
+    return {'username': username, 'id': '123', 'role': 'admin'}
 
-def get_commits_info(username=None, time_range=None):
-    return [{'commits_count': 10, 'yyyymmdd_date': '20180101'},
-            {'commits_count': 10, 'yyyymmdd_date': '20180102'}]
+def get_commits(username, start_date, end_date):
+    return [{'timestamp': 'yyyy-mm-dd:hh:mm:ss', 'commit_message': 'Some updates'}]

@@ -2,7 +2,7 @@ swagger: '2.0'
 
 info:
   title: User API
-  version: "0.3.0"
+  version: "0.2.0"
 
 paths:
   /users/{username}:
@@ -20,23 +20,22 @@ paths:
         200:
           description: Successful response.
           schema:
-            type: object
-            properties:
-              user_info:
-                type: string
-                description: User information
+            $ref: '#/definitions/User'
   /users/{username}/commits:
     get:
       x-swagger-router-controller: gm_analytics
-      operationId: handlers.get_commits_info
-      summary: Returns user information.
+      operationId: handlers.get_commits
+      summary: Returns commits in a time range.
       parameters:
         - name: username
           in: path
           required: true
           type: string
           format: path
-        - name: time_range
+        - name: start_date
+          in: query
+          type: string
+        - name: end_date
           in: query
           type: string
       responses:
@@ -45,13 +44,40 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/Item'
+              $ref: '#/definitions/Commit'
 
 definitions:
-  Item:
+  User:
     type: object
+    required:
+      - username
+      - id
+      - role
     properties:
-      commits_count:
-        type: integer
-      yyyymmdd_date:
+      username:
         type: string
+        description: User username
+        example: john.doe
+      id:
+        type: string
+        description: User id
+        example: 123
+      role:
+        type: string
+        description: User role
+        example: collaborator
+
+  Commit:
+     type: object
+     required:
+       - timestamp
+       - commit_message
+     properties:
+       timestamp:
+         type: string
+         description: Commit timestamp
+         example: 20190901102005
+       commit_message:
+         type: string
+         description: Commit message
+         example: Some commit message
