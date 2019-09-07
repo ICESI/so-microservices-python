@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Microservices with Python
 
 ### How to execute the examples
@@ -20,6 +21,9 @@ tox -e pytest
 ```
 
 ## Logging example
+=======
+## Logging
+>>>>>>> 2acce4f6382559a58ca11ed53799862e81f107d9
 
 ```
 import os
