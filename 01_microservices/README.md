@@ -1,5 +1,3 @@
-# so-microservices-python-part2
-
 ## Logging
 
 ```
