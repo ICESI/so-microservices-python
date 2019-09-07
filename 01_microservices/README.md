@@ -13,7 +13,13 @@ export PRODUCTION=true
 ./scripts/deploy.sh
 ```
 
-Tests
+Tests with pytest
+```
+pip3 install -r requirements_dev.txt --user
+pytest -v
+```
+
+Test with tox
 ```
 pip3 install -r requirements_dev.txt --user
 tox -e pytest
