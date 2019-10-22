@@ -102,6 +102,11 @@ source $HOME/.pyenv/versions/3.7.3/bin/virtualenvwrapper.sh
 sudo apt install direnv
 ```
 
+vi ~/.zshenv
+```
+eval "$(direnv hook zsh)"
+```
+
 vi ~/.direnvrc
 ```
 layout_virtualenv() {
@@ -127,7 +132,6 @@ Cree un archivo con las configuraciones necesarias
 vi .envrc
 export FOO='BAR'
 layout virtualenvwrapper my-awesome-project
-
 ```
 
 Apruebe los cambios
@@ -164,4 +168,5 @@ Practique los comandos que se muestran en la tabla a continuación
 https://github.com/pyenv/pyenv/issues/692  
 https://github.com/jiansoung/issues-list/issues/13  
 https://weknowinc.com/blog/running-multiple-python-versions-mac-osx  
-https://github.com/pyenv/pyenv-virtualenvwrapper
+https://github.com/pyenv/pyenv-virtualenvwrapper  
+https://direnv.net/
