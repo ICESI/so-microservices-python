@@ -104,6 +104,11 @@ sudo apt install direnv
 
 vi ~/.direnvrc
 ```
+layout_virtualenv() {
+  local venv_path="$1"
+  source ${venv_path}/bin/activate
+}
+
 layout_virtualenvwrapper() {
   local venv_path="${WORKON_HOME}/$1"
   layout_virtualenv $venv_path
