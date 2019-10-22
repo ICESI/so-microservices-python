@@ -92,8 +92,8 @@ eval "$(rbenv init -)"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python
-export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.pyenv/versions/3.6.8/bin/virtualenv
-source $HOME/.pyenv/versions/3.6.8/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.pyenv/versions/3.7.3/bin/virtualenv
+source $HOME/.pyenv/versions/3.7.3/bin/virtualenvwrapper.sh
 ```
 
 ### Activación automática de ambientes (not working)
