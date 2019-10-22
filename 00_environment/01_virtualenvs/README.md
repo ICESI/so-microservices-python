@@ -163,4 +163,5 @@ Practique los comandos que se muestran en la tabla a continuación
 
 https://github.com/pyenv/pyenv/issues/692  
 https://github.com/jiansoung/issues-list/issues/13  
-https://weknowinc.com/blog/running-multiple-python-versions-mac-osx
+https://weknowinc.com/blog/running-multiple-python-versions-mac-osx  
+https://github.com/pyenv/pyenv-virtualenvwrapper
