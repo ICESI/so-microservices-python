@@ -72,7 +72,7 @@ $ deactivate
 $ workon flaskdev
 ```
 
-### Instalacion múltiples version de Python en MacOS (Mojave)
+### Instalacion múltiples versiones de Python en MacOS (Mojave)
 
 ```
 brew install readline xz zlib pyenv
@@ -94,6 +94,47 @@ export PROJECT_HOME=$HOME/Devel
 export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python
 export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.pyenv/versions/3.6.8/bin/virtualenv
 source $HOME/.pyenv/versions/3.6.8/bin/virtualenvwrapper.sh
+```
+
+### Activación automática de ambientes (not working)
+
+```
+sudo apt install direnv
+```
+
+vi ~/.direnvrc
+```
+layout_virtualenvwrapper() {
+  local venv_path="${WORKON_HOME}/$1"
+  layout_virtualenv $venv_path
+}
+```
+
+Cree un directorio para su proyecto y un ambiente virtual
+```
+mkdir dir my-project
+cd my-project
+mkvirtualenv my-project-env
+```
+
+Cree un archivo con las configuraciones necesarias
+```
+vi .envrc
+export FOO='BAR'
+layout virtualenvwrapper my-awesome-project
+
+```
+
+Apruebe los cambios
+```
+direnv allow
+```
+
+Para probar ejecute las siguientes instrucciones
+```
+echo $FOO
+cd ..
+echo $FOO
 ```
 
 ### Desarrollo
