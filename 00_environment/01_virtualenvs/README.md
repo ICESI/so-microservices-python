@@ -74,6 +74,7 @@ $ workon flaskdev
 
 ### Instalacion múltiples versiones de Python en MacOS (Mojave)
 
+Install pyenv
 ```
 brew install readline xz zlib pyenv
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
@@ -85,15 +86,49 @@ export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/sqlite/lib/pkgconfig"
 eval "$(pyenv init -)"
 pyenv install 3.7.3
 pyenv global 3.7.3
+```
 
-vi ~/.zshrc
+vi ~/.zshenv
+```
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python
+export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python3.7
 export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.pyenv/versions/3.7.3/bin/virtualenv
 source $HOME/.pyenv/versions/3.7.3/bin/virtualenvwrapper.sh
+```
+
+### Instalación múltiples versiones de Python en Linux
+
+Install pyenv
+```
+curl https://pyenv.run | bash
+eval "$(pyenv init -)"
+pyenv install 3.7.3
+pyenv global 3.7.3
+```
+
+vi ~/.zshenv
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+eval "$(pyenv init -)"
+eval "$(rbenv init -)"
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python3.7
+export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
+source $HOME/.local/bin/virtualenvwrapper.sh
+
+pyenv shell 3.7.3
 ```
 
 ### Activación automática de ambientes (not working)
@@ -136,7 +171,7 @@ layout virtualenvwrapper my-awesome-project
 
 Apruebe los cambios
 ```
-direnv allow
+direnv allow .
 ```
 
 Para probar ejecute las siguientes instrucciones
@@ -170,3 +205,4 @@ https://github.com/jiansoung/issues-list/issues/13
 https://weknowinc.com/blog/running-multiple-python-versions-mac-osx  
 https://github.com/pyenv/pyenv-virtualenvwrapper  
 https://direnv.net/
+https://github.com/pyenv/pyenv
