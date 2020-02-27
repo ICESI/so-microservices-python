@@ -103,6 +103,12 @@ source $HOME/.pyenv/versions/3.7.3/bin/virtualenvwrapper.sh
 
 Install pyenv
 ```
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+```
+
+```
 curl https://pyenv.run | bash
 eval "$(pyenv init -)"
 pyenv install 3.7.3
@@ -200,9 +206,11 @@ Practique los comandos que se muestran en la tabla a continuación
 
 ### Referencias
 
-https://github.com/pyenv/pyenv/issues/692  
-https://github.com/jiansoung/issues-list/issues/13  
-https://weknowinc.com/blog/running-multiple-python-versions-mac-osx  
-https://github.com/pyenv/pyenv-virtualenvwrapper  
-https://direnv.net/
-https://github.com/pyenv/pyenv
+* https://github.com/pyenv/pyenv/issues/692  
+* https://github.com/jiansoung/issues-list/issues/13  
+* https://weknowinc.com/blog/running-multiple-python-versions-mac-osx  
+* https://github.com/pyenv/pyenv-virtualenvwrapper  
+* https://direnv.net/
+* https://github.com/pyenv/pyenv
+* https://github.com/pyenv/pyenv/wiki/Common-build-problems
+* https://github.com/pyenv/pyenv/blob/master/COMMANDS.md
