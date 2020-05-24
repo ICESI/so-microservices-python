@@ -127,7 +127,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 eval "$(pyenv init -)"
-eval "$(rbenv init -)"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python3.7
